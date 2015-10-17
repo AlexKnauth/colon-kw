@@ -8,5 +8,6 @@
 
 (define build-deps
   '("rackunit-lib"
+    "scribble-lib"
     ))
 
