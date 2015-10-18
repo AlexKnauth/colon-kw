@@ -1,4 +1,4 @@
-colon-kw
+colon-kw [![Build Status](https://travis-ci.org/AlexKnauth/colon-kw.png?branch=master)](https://travis-ci.org/AlexKnauth/colon-kw)
 ===
 a racket meta-language for writing :kw for #:kw
 
