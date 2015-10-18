@@ -2,6 +2,8 @@
 
 @title{colon-kw and kw-colon}
 
+source code: @url{https://github.com/AlexKnauth/colon-kw}
+
 @section{colon-kw}
 
 @defmodule[colon-kw #:lang]{
