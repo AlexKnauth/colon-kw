@@ -31,6 +31,6 @@ before_script:
 
 script:
  - raco pkg install --deps search-auto --link colon-kw
- - raco test -x -p colon-kw
+ - raco test -p colon-kw
 
 after_script:
