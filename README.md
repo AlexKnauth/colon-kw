@@ -2,6 +2,8 @@ colon-kw
 ===
 a racket meta-language for writing :kw for #:kw
 
+documentation: http://pkg-build.racket-lang.org/doc/colon-kw/index.html
+
 You can use
 ```racket
 #lang colon-kw racket
