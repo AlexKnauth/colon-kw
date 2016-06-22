@@ -7,7 +7,7 @@ source code: @url{https://github.com/AlexKnauth/colon-kw}
 @section{colon-kw}
 
 @defmodule[colon-kw #:lang]{
-A meta-language that adds @racket[:kw] syntax as an alternative to @racket[#:kw]
+A lang-extension that adds @racket[:kw] syntax as an alternative to @racket[#:kw]
 to any racket language that looks at the current readtable.
 
 For example,
@@ -21,7 +21,7 @@ Is a language like racket, except that @racket[:kw] reads equivalent to
 @section{kw-colon}
 
 @defmodule[kw-colon #:lang]{
-A meta-language that adds @racket[kw:] syntax as an alternative to
+A lang-extension that adds @racket[kw:] syntax as an alternative to
 @racket[#:kw].
 
 For example,
@@ -32,7 +32,7 @@ Is a language like racket, except that @racket[kw:] can be used in place of
 @racket[#:kw].
 }
 
-These two meta-languages are compose-able as well, so you can use
+These two lang-extensions are compose-able as well, so you can use
 @codeblock{
 #lang colon-kw kw-colon racket
 }

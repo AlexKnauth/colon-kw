@@ -1,6 +1,6 @@
 colon-kw [![Build Status](https://travis-ci.org/AlexKnauth/colon-kw.png?branch=master)](https://travis-ci.org/AlexKnauth/colon-kw)
 ===
-a racket meta-language for writing `:kw` for `#:kw`
+a racket lang-extension for writing `:kw` for `#:kw`
 
 documentation: http://pkg-build.racket-lang.org/doc/colon-kw/index.html
 
