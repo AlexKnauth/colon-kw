@@ -5,7 +5,8 @@
                      [colon-kw-get-info get-info]))
 
 (require (only-in syntax/module-reader make-meta-reader)
-         "../reader.rkt")
+         "../reader.rkt"
+         "lexer.rkt")
 
 (define (wrap-reader reader)
   (define (rd . args)
@@ -32,5 +33,9 @@
      (lambda (key defval)
        (define (fallback) (if proc (proc key defval) defval))
        (case key
+         [(color-lexer)
+          (make-colon-kw-lexer
+           (or (fallback)
+               (dynamic-require 'syntax-color/racket-lexer 'racket-lexer)))]
          [else (fallback)])))))
 
