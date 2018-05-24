@@ -10,12 +10,12 @@
 (define read-colon-keyword
   (case-lambda
     [(ch port)
-     (define sym (read/recursive port))
+     (define sym (read/recursive port #f (current-readtable) #f))
      (unless (symbol? sym)
        (raise-read-error "bad :keyword syntax" (object-name port) #f #f #f #f))
      (symbol->keyword sym)]
     [(ch port src line col pos)
-     (define stx (read-syntax/recursive src port))
+     (define stx (read-syntax/recursive src port #f (current-readtable) #f))
      (unless (symbol? (syntax-e stx))
        (raise-read-error "bad :keyword syntax" src line col pos (add1 (syntax-span stx))))
      (datum->syntax #f (symbol->keyword (syntax-e stx))
