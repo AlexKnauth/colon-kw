@@ -33,9 +33,9 @@
 
 (module+ test
   (require rackunit)
-  (define (reads in out)
-    (check-equal? (read (open-input-string in)) out))
-  (parameterize ([current-readtable (make-colon-keyword-readtable)])
-    (reads "a:b" 'a:b)
-    (reads ":a" '#:a)
-    (reads "#:a" '#:a)))
+  (define-binary-check (reads in out)
+    (parameterize ([current-readtable (make-colon-keyword-readtable)])
+      (check-equal? (read (open-input-string in)) out)))
+  (reads "a:b" 'a:b)
+  (reads ":a" '#:a)
+  (reads "#:a" '#:a))
