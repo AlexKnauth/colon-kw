@@ -1,4 +1,4 @@
-colon-kw [![Build Status](https://travis-ci.org/AlexKnauth/colon-kw.png?branch=master)](https://travis-ci.org/AlexKnauth/colon-kw)
+colon-kw
 ===
 a racket lang-extension for writing `:kw` for `#:kw`
 
